@@ -17,7 +17,7 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-.square {
+.square { /* So like the "square" div in index.js - the css for the individual squares */
   background: #fff;
   border: 1px solid #999;
   float: left;

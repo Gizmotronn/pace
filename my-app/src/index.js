@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'; /* Like importing modules/libraries in Python */
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.css'; /* Import css from `index.css` */
 
-class Square extends React.Component {
+class Square extends React.Component { 
   render() {
-    return (
-      <button className="square">
+    return ( // Create a button with the class name "square". This is to be completed 
+      <button className="square">  
         {/* TODO */}
       </button>
     );
@@ -20,11 +20,11 @@ class Board extends React.Component {
   render() {
     const status = 'Next player: X';
 
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
+    return (  // What we're doing here is creating the board row (3 of them for ttt) and then rendering the individual squares in each row (3 squares per row)
+      <div> 
+        <div className="status">{status}</div> 
+        <div className="board-row"> 
+          {this.renderSquare(0)} 
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
@@ -33,7 +33,7 @@ class Board extends React.Component {
           {this.renderSquare(4)}
           {this.renderSquare(5)}
         </div>
-        <div className="board-row">
+        <div /* Like html divs, this is a section that is a "board-row" */className="board-row">
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
@@ -43,15 +43,15 @@ class Board extends React.Component {
   }
 }
 
-class Game extends React.Component {
+class Game extends React.Component { // Just content/"blocks" part of react 'vanilla' or install (as in just pre-coded stuff in the react package??)
   render() {
     return (
       <div className="game">
         <div className="game-board">
-          <Board />
+          <Board /*Display the game board?*//> 
         </div>
         <div className="game-info">
-          <div>{/* status */}</div>
+          <div>{/* status - so a stub? fill in content for "game-info"*/}</div>
           <ol>{/* TODO */}</ol>
         </div>
       </div>
@@ -61,7 +61,7 @@ class Game extends React.Component {
 
 // ========================================
 
-ReactDOM.render(
+ReactDOM.render( // Render game?
   <Game />,
   document.getElementById('root')
 );
