@@ -2,15 +2,25 @@ import React from 'react'; /* Like importing modules/libraries in Python */
 import ReactDOM from 'react-dom';
 import './index.css'; /* Import css from `index.css` */
 
-class Square extends React.Component { 
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
-    return ( // Create a button with the class name "square". This is to be completed 
-      <button className="square" onClick={function() { alert('click'/* When the square receives a click, which is a type of alert*/); }}>  
-        {this.props.value}
+    return (
+      <button 
+        className="square"
+        onClick={() => this.setState({value: 'X'})}
+      >
+        {this.state.value}
       </button>
     );
   }
-}
+ }
 
 class Board extends React.Component {
   renderSquare(i) {
