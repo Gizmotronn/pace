@@ -2,10 +2,10 @@
   <div id="root"></div>
   <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script> 
   <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script> 
-  <script type="text/javascript"> 
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel"> 
     const rootElement = document.getElementById('root') // Children are a prop/property - see prev commit on repo
-    const element = React.createElement('div', {className: 'container'}, 'Hello World'); // https://spectrum.chat/react/help/learning-javascript-egghead-io-and-needing-help-with-getting-text-to-display~5b8b0cb6-3783-4a8e-9a40-9cbf96172c17
-    console.log(element) // Prop - property --> https://i.paste.pics/5be6c1c69dbe13479595aea834a333ef.png
-    ReactDOM.render(element, rootElement)  // https://egghead.io/lessons/react-create-a-user-interface-with-react-s-createelement-api
+    const element = <div classname="Container">Hello World</div>
+    ReactDOM.render(element, rootElement)
   </script>
 </body>
