@@ -4,8 +4,15 @@
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
-    const rootElement = document.getElementById('root')
-    const element = <div className="container">Hello World</div>
+    //const rootElement = document.getElementById('root')
+    const helloElement = React.createElement('span', null, 'Hello')
+    const worldElement = React.createElement('span', null, 'World')
+    const element = React.createElement(
+      React.Fragment, 
+      null, 
+      helloElement, 
+      worldElement,
+    )
     ReactDOM.render(element, rootElement)
   </script>
 </body>
