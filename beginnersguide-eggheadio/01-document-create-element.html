@@ -1,11 +1,18 @@
 <body>
   <div id="root"></div>
-  <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script> 
-  <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script> 
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-  <script type="text/babel"> 
-    const rootElement = document.getElementById('root') // Children are a prop/property - see prev commit on repo
-    const element = <div classname="Container">Hello World</div>
+  <script type="text/babel">
+    //const rootElement = document.getElementById('root')
+    const helloElement = React.createElement('span', null, 'Hello')
+    const worldElement = React.createElement('span', null, 'World')
+    const element = React.createElement(
+      React.Fragment, 
+      null, 
+      helloElement, 
+      worldElement,
+    )
     ReactDOM.render(element, rootElement)
   </script>
 </body>
