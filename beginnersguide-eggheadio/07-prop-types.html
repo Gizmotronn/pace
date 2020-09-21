@@ -15,11 +15,11 @@
       )
     }
     SayHello.propTypes = {
-      firstName: PropTypes.string.isRequired,
+      firstName: PropTypes.string.isRequired, // A string is required
       lastName: PropTypes.string.isRequired,
     }
 
-    const element = <SayHello firstName={false} /> // First name prop is being rendered out, last name isn't being mentioned at all
+    const element = <SayHello firstName={false} /> // Boolean
 
     ReactDOM.render(element, rootElement)
   </script>
