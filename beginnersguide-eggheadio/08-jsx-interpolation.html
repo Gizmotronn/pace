@@ -7,9 +7,7 @@
     function CharacterCount({text}) {
       return (
         <div>
-          {`The text "${text}" has `}
-          {text.length ? <strong>{text.length}</strong> : 'No'}
-          {' characters'}
+          {`The text ${text} has `} {text.length} characters  
         </div>
       )
     }
